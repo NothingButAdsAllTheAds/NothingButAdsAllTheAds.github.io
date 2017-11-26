@@ -6,9 +6,8 @@
     s.src = '//cdn.viglink.com/api/vglnk.js';
     var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
   }(document, 'script'));
+  /*
+    copy and paste this code into the end of all html pages
+    directly before </body>
+  */
 </script>
-
-/*
-  copy and paste this code into the end of all html pages
-  directly before </body>
-*/
