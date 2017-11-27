@@ -85,6 +85,7 @@ textarea:focus {
 	display: inline-block;
 	padding: 0 0 0 2em;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 #mainContent {
@@ -159,6 +160,10 @@ textarea:focus {
 
 .emailInputs {
 	display: inline-block;
+}
+
+.emailInputs input {
+	cursor: progress;
 }
 
 .forgotStuffs {

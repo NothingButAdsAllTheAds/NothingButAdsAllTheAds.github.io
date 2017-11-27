@@ -41,8 +41,52 @@ function showNewsletter() {
 	document.getElementById('forgotSocialSecurity').addEventListener('mousedown', forgotSocialSecurity);
 }
 
+function shuffle(a) {
+	for (let i = a.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[a[i], a[j]] = [a[j], a[i]];
+	}
+	return a;
+}
+
+function waitToLoad(el, time) {
+	el.style.visibility = 'hidden';
+	window.setTimeout(function () {
+		el.style.visibility = 'visible';
+	}, time);
+}
+
+function normalize(arr, range) {
+	var oldRange = arr[arr.length - 1] - arr[0];
+	var scalingFactor = range / oldRange;
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] -= arr[0];
+		arr[i] *= scalingFactor;
+	}
+	return arr;
+}
+
+function delayLoadingOfElements() {
+	var elements = [
+		document.getElementById('mainImage'),
+		document.getElementById('mainText'),
+		document.getElementById('mainTitle'),
+		document.getElementById('logo')
+	];
+	var times = [];
+	for (let i = 0; i < elements.length; i++)
+		times.push(Math.pow(Math.random(), 2));
+	times.sort();
+	times = normalize(times, 15000);
+	times = shuffle(times);
+	for (let i = 0; i < elements.length; i++) {
+		waitToLoad(elements[i], times[i]);
+	}
+}
+
 function onload() {
-	window.setTimeout(showNewsletter, 1500);
+	//window.setTimeout(showNewsletter, 1500);
+	delayLoadingOfElements();
 }
 
 window.addEventListener('DOMContentLoaded', onload);
