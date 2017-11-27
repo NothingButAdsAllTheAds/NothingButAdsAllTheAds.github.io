@@ -20,11 +20,42 @@ h1 {
 	font-size: 3em;
 }
 
+#topBox {
+	background: lightgray;
+	height: 7em;
+	width: 100vw;
+	position: absolute;
+}
+
 #main {
 	max-width: 800px;
 	margin: 0 auto;
+	position: relative;
 }
 
 #header {
-	background-color: lightgray;
+	padding: 2em 0;
+	vertical-align: middle;
+	height: 5em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#header #leftSide {
+	float: left;
+}
+
+#header #logo {
+	height: 3em;
+}
+
+#header #nav {
+	display: inline-block;
+	float: right;
+}
+
+#header #nav h4 {
+	display: inline-block;
+	padding: 0 0 0 2em;
+	text-transform: uppercase;
 }
