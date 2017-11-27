@@ -90,3 +90,8 @@ function onload() {
 }
 
 window.addEventListener('DOMContentLoaded', onload);
+
+function meow() {
+	document.getElementById("mainImage").style.display = "none";
+	document.getElementById("meow").style.display = "inline";
+}
