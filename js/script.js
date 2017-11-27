@@ -85,7 +85,7 @@ function delayLoadingOfElements() {
 }
 
 function onload() {
-	//window.setTimeout(showNewsletter, 1500);
+	window.setTimeout(showNewsletter, 3500);
 	delayLoadingOfElements();
 }
 
