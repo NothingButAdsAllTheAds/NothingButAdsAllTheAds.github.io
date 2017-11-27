@@ -159,4 +159,8 @@ textarea:focus {
 	font-size: 0.8em;
 	text-decoration: underline;
 	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
