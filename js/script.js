@@ -42,7 +42,7 @@ function showNewsletter() {
 }
 
 function onload() {
-	window.setTimeout(showNewsletter, 1000);
+	window.setTimeout(showNewsletter, 1500);
 }
 
 window.addEventListener('DOMContentLoaded', onload);
