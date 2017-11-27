@@ -18,6 +18,7 @@ h6 {
 
 h1 {
 	font-size: 3em;
+	margin-top: 0;
 }
 
 #topBox {
@@ -25,16 +26,18 @@ h1 {
 	height: 7em;
 	width: 100vw;
 	position: absolute;
+	border-bottom: 1px solid black;
 }
 
 #main {
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 	position: relative;
 }
 
 #header {
 	padding: 2em 0;
+	margin-bottom: 2em;
 	vertical-align: middle;
 	height: 5em;
 	-webkit-box-sizing: border-box;
@@ -58,4 +61,20 @@ h1 {
 	display: inline-block;
 	padding: 0 0 0 2em;
 	text-transform: uppercase;
+}
+
+#mainContent {
+	float: left;
+	width: calc(100% - 325px);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 2em;
+}
+
+#sidebar {
+	float: right;
+	width: 325px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 2em;
 }
