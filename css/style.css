@@ -5,6 +5,7 @@ html {
 body {
 	padding: 0;
 	margin: 0;
+	background-image: url(/Pictures/Page%20Background.svg);
 }
 
 h1,
@@ -46,7 +47,7 @@ textarea:focus {
 }
 
 #topBox {
-	background: lightgray;
+	background-image: url('/Pictures/Header Background.svg');
 	height: 7em;
 	width: 100vw;
 	position: absolute;
@@ -105,6 +106,36 @@ textarea:focus {
 	padding-top: 2em;
 }
 
+@media (max-width: 800px) {
+	#mainContent,
+	#sidebar {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media (max-width: 650px) {
+	#header #nav h4 {
+		display: none;
+	}
+
+	#header #nav h4:last-of-type {
+		display: inline-block;
+	}
+}
+
+.recentStory {
+	cursor: pointer;
+}
+
+.recentStory:after {
+	content: "read more";
+	font-size: 0.8em;
+	border-bottom: 1px solid lightgray;
+	position: relative;
+	top: -1em;
+}
+
 #popupEmail {
 	position: fixed;
 	width: 100vw;
@@ -139,6 +170,20 @@ textarea:focus {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+}
+
+@media (max-width: 800px) {
+	#popupEmail > .container {
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+}
+
+@media (max-width: 600px) {
+	#popupEmail > .container {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
 }
 
 #popupEmail .container .container {

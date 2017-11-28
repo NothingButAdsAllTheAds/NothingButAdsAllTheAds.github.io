@@ -66,18 +66,34 @@ function normalize(arr, range) {
 	return arr;
 }
 
+function nodeListToElements(nodeListArr) {
+	var elements = [];
+	for (let i = 0; i < nodeListArr.length; i++) {
+		for (let j = 0; j < nodeListArr[i].length; j++) {
+			elements.push(nodeListArr[i][j]);
+		}
+	}
+	return elements;
+}
+
 function delayLoadingOfElements() {
 	var elements = [
 		document.getElementById('mainImage'),
 		document.getElementById('mainText'),
 		document.getElementById('mainTitle'),
-		document.getElementById('logo')
+		document.getElementById('logo'),
+		document.getElementById('nav')
 	];
+	var nodeLists = [
+		document.getElementsByTagName('h4'),
+		document.getElementsByClassName('recentStory')
+	]
+	elements = elements.concat(nodeListToElements(nodeLists));
 	var times = [];
 	for (let i = 0; i < elements.length; i++)
 		times.push(Math.pow(Math.random(), 2));
 	times.sort();
-	times = normalize(times, 15000);
+	times = normalize(times, 10000);
 	times = shuffle(times);
 	for (let i = 0; i < elements.length; i++) {
 		waitToLoad(elements[i], times[i]);
