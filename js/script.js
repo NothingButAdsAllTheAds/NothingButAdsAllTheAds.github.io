@@ -2,6 +2,7 @@ var firstNames = ["Emma", "Liam", "Olivia", "Noah", "Ava", "Logan", "Isabella", 
 var lastNames = ["Smith", "Jones", "Brown", "Johnson", "Williams", "Miller", "Taylor", "Wilson", "Davis", "White", "Clark", "Hall", "Thomas", "Thompson", "Moore", "Hill", "Walker", "Anderson", "Wright", "Martin", "Wood", "Allen", "Robinson", "Lewis", "Scott", "Young", "Jackson", "Adams", "Tryniski", "Green", "Evans", "King", "Baker", "John", "Harris", "Roberts", "Campbell", "James", "Stewart", "Lee", "County"];
 var emailExtentions = ["@gmail.com", "@outlook.com", "@yahoo.com", "@hotmail.com"];
 var passwords = ["123456", "password", "12345678", "qwerty", "123456789", "12345", "1234", "111111", "1234567", "dragon", "123123", "baseball", "abc123", "football", "monkey", "letmein", "696969", "shadow", "master", "666666", "qwertyuiop", "123321", "mustang", "1234567890", "michael", "654321", "pussy", "superman", "1qaz2wsx", "7777777"];
+var popups;
 
 function forgotEmail() {
 	var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
@@ -30,6 +31,9 @@ function forgotSocialSecurity() {
 
 function closeNewsletter() {
 	document.getElementById('popupEmail').style.display = 'none';
+	window.setTimeout(function () {
+		openPopup(1);
+	}, 7000);
 }
 
 function showNewsletter() {
@@ -39,6 +43,25 @@ function showNewsletter() {
 	document.getElementById('forgotEmail').addEventListener('mousedown', forgotEmail);
 	document.getElementById('forgotPassword').addEventListener('mousedown', forgotPassword);
 	document.getElementById('forgotSocialSecurity').addEventListener('mousedown', forgotSocialSecurity);
+}
+
+function openPopup(index) {
+	var popup = popups[index];
+	if (!popup) {
+		return false;
+	}
+	popup.style.display = 'flex';
+	document.getElementsByClassName('closePopup')[index].addEventListener('mousedown', function (e) {
+		closePopup(e, popup, index);
+	});
+}
+
+function closePopup(e, popup, index) {
+	popup.style.display = 'none';
+	var timeDelayOffset = Math.random() * 7000 - 3500;
+	window.setTimeout(function () {
+		openPopup(index + 1);
+	}, 7000 + timeDelayOffset);
 }
 
 function shuffle(a) {
@@ -103,6 +126,7 @@ function delayLoadingOfElements() {
 function onload() {
 	window.setTimeout(showNewsletter, 3500);
 	delayLoadingOfElements();
+	popups = document.getElementsByClassName('popup');
 }
 
 window.addEventListener('DOMContentLoaded', onload);

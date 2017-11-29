@@ -136,7 +136,7 @@ textarea:focus {
 	top: -1em;
 }
 
-#popupEmail {
+.popup {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -155,7 +155,7 @@ textarea:focus {
 	display: none;
 }
 
-#popupEmail > .container {
+.popup > .container {
 	width: 800px;
 	height: 500px;
 	border: 1px solid black;
@@ -173,20 +173,20 @@ textarea:focus {
 }
 
 @media (max-width: 800px) {
-	#popupEmail > .container {
+	.popup > .container {
 		-webkit-transform: scale(0.75);
 		transform: scale(0.75);
 	}
 }
 
 @media (max-width: 600px) {
-	#popupEmail > .container {
+	.popup > .container {
 		-webkit-transform: scale(0.5);
 		transform: scale(0.5);
 	}
 }
 
-#popupEmail .container .container {
+.popup .container .container {
 	position: relative;
 	background: white;
 	padding: 2em;
@@ -195,7 +195,7 @@ textarea:focus {
 	box-sizing: border-box;
 }
 
-#closeEmail {
+.closePopup {
 	position: absolute;
 	top: 0;
 	right: 16px;
