@@ -220,3 +220,38 @@ textarea:focus {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+.allTheMoney {
+	color: #85bb65;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	animation: fading 0.5s 1;
+	-webkit-animation: fading 0.5s 1;
+	animation-fill-mode: forwards;
+
+	animation-delay: 2s;
+	-webkit-animation-delay: 1s;
+	/* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fading {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fading {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
