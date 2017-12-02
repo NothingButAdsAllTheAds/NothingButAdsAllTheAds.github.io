@@ -1,4 +1,4 @@
-function generate_content() {
+function generateContent() {
 	var wCount = Math.floor((window.innerWidth) / 180);
 	var hCount = Math.floor((window.innerHeight * 2) / 150);
 	var b = document.getElementsByTagName("body")[0];
@@ -12,7 +12,7 @@ function generate_content() {
 }
 
 function generateMoreContent() {
-	generate_content();
+	generateContent();
 }
 
 window.onscroll = function (ev) {
