@@ -236,7 +236,7 @@ textarea:focus {
 
 .allTheMoney {
 	color: #85bb65;
-	position: fixed;
+	position: absolute;
 	pointer-events: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -245,7 +245,6 @@ textarea:focus {
 	animation: fading 0.5s 1;
 	-webkit-animation: fading 0.5s 1;
 	animation-fill-mode: forwards;
-
 	animation-delay: 2s;
 	-webkit-animation-delay: 1s;
 	/* Safari and Chrome */
