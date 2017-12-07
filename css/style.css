@@ -138,7 +138,9 @@ textarea:focus {
 }
 
 .recentStory {
-	cursor: pointer;
+	color: black;
+	text-decoration: none;
+	display: block;
 }
 
 .recentStory:after {
