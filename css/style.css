@@ -111,6 +111,14 @@ textarea:focus {
 	padding-right: 1em;
 }
 
+#myShop {
+	z-index: 0;
+}
+
+#sprd-back-to-top {
+	display: none;
+}
+
 #sidebar {
 	float: right;
 	width: 325px;
@@ -158,6 +166,7 @@ textarea:focus {
 	top: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.75);
+	z-index: 1;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
