@@ -58,7 +58,7 @@ function openPopup(index) {
 
 function closePopup(e, popup, index) {
 	popup.style.display = 'none';
-	var timeDelayOffset = Math.random() * 7000 - 3500;
+	var timeDelayOffset = 7000 - Math.random() * 3500;
 	window.setTimeout(function () {
 		openPopup(index + 1);
 	}, 7000 + timeDelayOffset);
