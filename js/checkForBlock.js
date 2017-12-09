@@ -7,7 +7,6 @@ function check_ads() {
 		k.innerHTML = "F";
 	}
 }
-window.addEventListener('load', check_ads);
 
 function adblockIsActive() {
 	var m;
@@ -19,5 +18,6 @@ function adblockIsActive() {
 			}
 			return true;
 		}
+		check_ads();
 	}
 }
