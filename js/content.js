@@ -20,3 +20,13 @@ window.onscroll = function (ev) {
 		generateMoreContent();
 	}
 };
+
+function onload() {
+	if (adblockIsActive()) {
+		document.getElementById('adblockAd').display = 'block';
+	} else {
+		generateContent();
+	}
+}
+
+window.addEventListener('load', onload);
