@@ -1,9 +1,9 @@
 function adblockIsActive() {
 	try {
 		(_defineProperty).toString();
-		return true;
+		return false;
 	}
 	catch (err) {
-		return false;
+		return true;
 	}
 }
