@@ -133,6 +133,10 @@ textarea:focus {
 		float: none;
 		width: 100%;
 	}
+
+	#fixedAd {
+		display: none;
+	}
 }
 
 @media (max-width: 650px) {
