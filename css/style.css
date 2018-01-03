@@ -283,3 +283,9 @@ textarea:focus {
 		opacity: 0;
 	}
 }
+
+/*an annoying ad that I can't get rid of*/
+
+#bdv_DSK_top1 {
+	display: none !important;
+}
