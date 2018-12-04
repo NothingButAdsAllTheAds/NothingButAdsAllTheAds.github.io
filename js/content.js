@@ -23,7 +23,7 @@ window.onscroll = function (ev) {
 
 function onload() {
 	if (adblockIsActive()) {
-		document.getElementById('adblockAd').display = 'block';
+		document.getElementsByClassName('adblockAd')[0].display = 'block';
 	} else {
 		generateContent();
 	}
